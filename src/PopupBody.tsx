@@ -27,7 +27,7 @@ export const PopupBody = ({
   };
 
   return (
-    <div className="w-64 border border-solid border-black p-4">
+    <div className="w-64 p-4">
       <div className="flex flex-col">
         {hero ? (
           <div className="mb-2">
