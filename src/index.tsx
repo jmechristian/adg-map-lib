@@ -1,4 +1,5 @@
 export * from './PopupBody';
+export * from './PopupArch';
 export * from './MarkerPin';
 export * from './ResetButton';
 export * from './FiltersButton';

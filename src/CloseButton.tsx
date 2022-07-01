@@ -39,7 +39,7 @@ export const CloseButton = ({
           className="ml-2 hidden sm:inline-block text-white"
           style={{ fontSize: `${fontSize}` }}
         >
-          Close Map
+          Close
         </div>
       </div>
     </div>
