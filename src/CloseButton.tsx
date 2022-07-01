@@ -1,42 +1,42 @@
 import React from 'react';
 
-export interface FiltersProps {
+export interface CloseProps {
   height: string;
   width: string;
   fontSize: string;
   onClick: () => void;
 }
 
-export const FiltersButton = ({
+export const CloseButton = ({
   height,
   width,
   fontSize,
   onClick,
-}: FiltersProps) => {
-  const FilterIcon = (
+}: CloseProps) => {
+  const CloseIcon = (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      className="fill-slate-900"
+      className="fill-white"
       viewBox="0 0 20 20"
       style={{ width: `${width}`, height: `${height}` }}
     >
       <path
         fillRule="evenodd"
-        d="M3 3a1 1 0 011-1h12a1 1 0 011 1v3a1 1 0 01-.293.707L12 11.414V15a1 1 0 01-.293.707l-2 2A1 1 0 018 17v-5.586L3.293 6.707A1 1 0 013 6V3z"
+        d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
         clipRule="evenodd"
       />
     </svg>
   );
 
   return (
-    <div className="bg-white rounded-lg inline-block text-slate-900 cursor-pointer shadow-md">
+    <div className="bg-slate-900 rounded-lg inline-block cursor-pointer shadow-md">
       <div className="flex py-2 px-3 items-center" onClick={onClick}>
-        <div>{FilterIcon}</div>
+        <div>{CloseIcon}</div>
         <div
-          className="ml-2 hidden sm:inline-block"
+          className="ml-2 hidden sm:inline-block text-white"
           style={{ fontSize: `${fontSize}` }}
         >
-          Filter
+          Close Map
         </div>
       </div>
     </div>

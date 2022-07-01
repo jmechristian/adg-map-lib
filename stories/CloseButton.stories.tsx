@@ -2,15 +2,15 @@ import React from 'react';
 
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 
-import { ResetButton } from '../src';
+import { CloseButton } from '../src';
 
 export default {
-  title: 'Reset Button',
-  component: ResetButton,
-} as ComponentMeta<typeof ResetButton>;
+  title: 'Close Button',
+  component: CloseButton,
+} as ComponentMeta<typeof CloseButton>;
 
-const Template: ComponentStory<typeof ResetButton> = args => (
-  <ResetButton {...args} />
+const Template: ComponentStory<typeof CloseButton> = args => (
+  <CloseButton {...args} />
 );
 
 export const Default = Template.bind({});

@@ -4,14 +4,21 @@ export interface ListViewProps {
   height: string;
   width: string;
   fontSize: string;
+  onClick: () => void;
 }
 
-export const ListViewButton = ({ height, width, fontSize }: ListViewProps) => {
+export const ListViewButton = ({
+  height,
+  width,
+  fontSize,
+  onClick,
+}: ListViewProps) => {
   const ListIcon = (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      className={`${height} ${width} fill-slate-900`}
+      className="fill-slate-900"
       viewBox="0 0 20 20"
+      style={{ width: `${width}`, height: `${height}` }}
     >
       <path
         fillRule="evenodd"
@@ -22,10 +29,13 @@ export const ListViewButton = ({ height, width, fontSize }: ListViewProps) => {
   );
 
   return (
-    <div className="bg-white rounded-lg inline-block text-slate-900">
-      <div className="flex py-2 px-3 items-center ">
+    <div className="bg-white rounded-lg inline-block text-slate-900 cursor-pointer shadow-md">
+      <div className="flex py-2 px-3 items-center" onClick={onClick}>
         <div>{ListIcon}</div>
-        <div className={`ml-2 ${fontSize} hidden sm:inline-block`}>
+        <div
+          className="ml-2 hidden sm:inline-block"
+          style={{ fontSize: `${fontSize}` }}
+        >
           List View
         </div>
       </div>

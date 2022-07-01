@@ -4,9 +4,15 @@ export interface ResetProps {
   height: string;
   width: string;
   fontSize: string;
+  onClick: () => void;
 }
 
-export const ResetButton = ({ height, width, fontSize }: ResetProps) => {
+export const ResetButton = ({
+  height,
+  width,
+  fontSize,
+  onClick,
+}: ResetProps) => {
   const CameraIcon = (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -20,8 +26,8 @@ export const ResetButton = ({ height, width, fontSize }: ResetProps) => {
   );
 
   return (
-    <div className="bg-white rounded-lg inline-block text-slate-900">
-      <div className="flex py-2 px-3 items-center ">
+    <div className="bg-white rounded-lg inline-block text-slate-900 cursor-pointer shadow-md">
+      <div className="flex py-2 px-3 items-center" onClick={onClick}>
         <div>{CameraIcon}</div>
         <div
           className="ml-2 hidden sm:inline-block"
