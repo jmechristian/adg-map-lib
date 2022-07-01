@@ -30,7 +30,10 @@ export const CloseButton = ({
 
   return (
     <div className="bg-slate-900 rounded-lg inline-block cursor-pointer shadow-md">
-      <div className="flex py-2 px-3 items-center" onClick={onClick}>
+      <div
+        className="flex py-2 px-4 items-center align-middle self-center"
+        onClick={onClick}
+      >
         <div>{CloseIcon}</div>
         <div
           className="ml-2 hidden sm:inline-block text-white"

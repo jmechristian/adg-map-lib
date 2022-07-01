@@ -27,7 +27,10 @@ export const ResetButton = ({
 
   return (
     <div className="bg-white rounded-lg inline-block text-slate-900 cursor-pointer shadow-md">
-      <div className="flex py-2 px-3 items-center" onClick={onClick}>
+      <div
+        className="flex py-2 px-4 items-center align-middle self-center"
+        onClick={onClick}
+      >
         <div>{CameraIcon}</div>
         <div
           className="ml-2 hidden sm:inline-block"
