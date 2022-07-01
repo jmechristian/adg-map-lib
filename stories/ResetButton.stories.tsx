@@ -16,7 +16,7 @@ const Template: ComponentStory<typeof ResetButton> = args => (
 export const Default = Template.bind({});
 
 Default.args = {
-  width: 'w-5',
-  height: 'h-5',
-  fontSize: 'text-md',
+  width: '20px',
+  height: '20px',
+  fontSize: '16px',
 };
