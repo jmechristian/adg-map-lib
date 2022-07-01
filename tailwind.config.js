@@ -4,7 +4,11 @@ module.exports = {
   purge: ['./src/**/*.{js,jsx,ts,tsx}', './stories/*'],
   darkMode: 'media',
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        brand: '#d31b5d',
+      },
+    },
   },
   variants: {},
   plugins: [],

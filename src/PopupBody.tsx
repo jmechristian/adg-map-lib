@@ -27,7 +27,7 @@ export const PopupBody = ({
   };
 
   return (
-    <div className="w-64 p-4">
+    <div className="w-64 px-4 pt-4 pb-6 bg-white">
       <div className="flex flex-col">
         {hero ? (
           <div className="mb-2">
@@ -45,12 +45,12 @@ export const PopupBody = ({
       <div className="font-bold text-lg text-slate-900 mb-1">
         {name ? name : ''}
       </div>
-      <div className="text-sm mb-4">
+      <div className="text-sm mb-4 text-slate-900">
         {description ? truncateString(description, 90) : ''}
       </div>
       <div>
-        <div className="bg-slate-900 rounded-lg w-2/3 flex justify-center align-middle">
-          <div className="text-white p-3">
+        <div className="bg-slate-900 rounded-lg w-1/2 flex justify-center align-middle">
+          <div className="text-white py-2 text-sm">
             <a href={link} target="_blank">
               View Project
             </a>
