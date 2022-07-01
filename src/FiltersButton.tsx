@@ -1,10 +1,16 @@
 import React from 'react';
 
-export const FiltersButton = () => {
+export interface FiltersProps {
+  height: string;
+  width: string;
+  fontSize: string;
+}
+
+export const FiltersButton = ({ height, width, fontSize }: FiltersProps) => {
   const FilterIcon = (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      className="h-5 w-5"
+      className={`${height} ${width} fill-slate-900`}
       viewBox="0 0 20 20"
       fill="currentColor"
     >
@@ -20,7 +26,7 @@ export const FiltersButton = () => {
     <div className="bg-white rounded-lg inline-block text-slate-900">
       <div className="flex py-2 px-3 items-center ">
         <div>{FilterIcon}</div>
-        <div className="ml-2 text-md hidden sm:inline-block">Filter</div>
+        <div className={`ml-2 ${fontSize} hidden sm:inline-block`}>Filter</div>
       </div>
     </div>
   );

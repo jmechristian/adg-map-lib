@@ -1,10 +1,16 @@
 import React from 'react';
 
-export const ResetButton = () => {
+export interface ResetProps {
+  height: string;
+  width: string;
+  fontSize: string;
+}
+
+export const ResetButton = ({ height, width, fontSize }: ResetProps) => {
   const CameraIcon = (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      className="h-5 w-5"
+      className={`${height} ${width} fill-slate-900`}
       viewBox="0 0 20 20"
       fill="currentColor"
     >
@@ -16,7 +22,7 @@ export const ResetButton = () => {
     <div className="bg-white rounded-lg inline-block text-slate-900">
       <div className="flex py-2 px-3 items-center ">
         <div>{CameraIcon}</div>
-        <div className="ml-2 text-md hidden sm:inline-block">Reset</div>
+        <div className={`ml-2 ${fontSize} hidden sm:inline-block`}>Reset</div>
       </div>
     </div>
   );
